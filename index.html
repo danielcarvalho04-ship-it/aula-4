@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Pelé the soccer</title>
+    <style>
+        header {
+            /* Cores e estilos do seu código original */
+            background-color: #129e08;
+            color: #350354;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            /* Cores e estilos do seu código original */
+            background-color: #5A0092;
+            color: #ffffff; /* Ajustado para branco para melhor contraste no fundo roxo */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
+            /* Estrutura do Prof. Marcelo */
+            display: flex;
+            align-items: center; /* Alinha a imagem e o texto verticalmente */
+            margin-bottom: 20px; /* Espaço entre os posts */
+            border-bottom: 1px solid #129e08; /* Linha divisória opcional */
+            padding-bottom: 20px;
+        }
+
+        img {
+            /* Tamanho definido por ambos */
+            width: 80px;
+            height: 80px;
+            margin-right: 20px; /* Espaço entre a imagem e o texto */
+            object-fit: cover; /* Garante que a imagem preencha o quadrado sem distorcer */
+        }
+
+        .artigo-autor {
+            /* Classe do Prof. Marcelo */
+            font-weight: bold;
+            color: #129e08; /* Cor verde para destacar o autor */
+        }
+        
+        /* Estilização básica para os botões do professor ficarem legais nas suas cores */
+        button {
+            background-color: #129e08;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        button:hover {
+            background-color: #0e7e06;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pelé the soccer</h1>
+        <p>Nesse blog irei contar sobre futebol e assuntos curiosos sobre o mesmo, sincero e sem enrolação.</p>
+    </header>
+    <main>
+        <article>
+            <img src="logo.png"
+                alt="Logotipo circular estilizado em roxo e verde neon do Peléverso futebol, mostrando jogadores de futebol atuais e de sua história, com fones de ouvido olhando para uma tela de computador com linhas de circuitos integrados e programação.">
+            <div>
+                <h2>Bem-Vindos ao Pelé the soccer</h2>
+                <p class="artigo-autor">Por: Daniel Oliveira de Carvalho</p>
+                <p>Dae, piazada! tão como?</p>
+                <p>Fala, galera! Sejam bem-vindos a minha área! Todos me chamam de Pelé, criei o Pelé the soccer — com essa vibe icônica em roxo e verde — para ser o nosso ponto de encontro oficial para falar sobre futebol. Por aqui, vou soltar os melhores assuntos sobre o esporte e partidas além de comentar sobre tudo que for “estouro” no futebol e comentar sobre os melhores times, jogadores e seleções, então fiquem à vontade para debater nos comentários e me contar logo de cara: quais são os seus times ou jogadores favoritos da vida de vocês? ⚽✨</p>
+                
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="logo.png"
+                alt="Logotipo Peléverso.">
+            <div>
+                <h2>Título do próximo post</h2>
+                <p class="artigo-autor">Por: Daniel Oliveira de Carvalho</p>
+                <p>Em breve, um novo texto sobre o mundo do futebol aqui!</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+<script>
+    // JavaScript funcional do Prof. Marcelo
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    })
+</script>
+
+</html>
